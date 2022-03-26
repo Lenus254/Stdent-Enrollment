@@ -3,8 +3,10 @@ from email.headerregistry import Address
 from django.shortcuts import render
 from enrollment.forms import studentform, SForm
 from .models import Student
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url='/accounts/login/')
 def show(request):
     return render(request,"home.html")
 

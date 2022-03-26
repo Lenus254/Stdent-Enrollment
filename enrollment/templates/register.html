@@ -2,11 +2,17 @@
 {% load bootstrap3 %}
 {% block content %}
 <div class="container">
-   <h1 class="text-center">{{title}}</h1> 
-    <form action="" method="post">
-        {%csrf_token%}
-        {% bootstrap_form form%}
-        <button type="submit">register</button>
-    </form>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 class="text-center">{{title}}</h1> 
+        <form action="" method="post">
+            {%csrf_token%}
+            {% bootstrap_form form%}
+            <button type="submit">register</button>
+        </form>
+        </div>
+    
+    </div>
 </div>
 {% endblock %}
